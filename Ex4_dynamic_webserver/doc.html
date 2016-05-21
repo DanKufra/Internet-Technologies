@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<br>
+
+The tests are run by starting a hujiwebserver and then defining multiple usages<br>
+on the server object. Then for each test we start an http client that sends a custom<br>
+request to the server and checks that the response we received matched what we expected</br>
+<br>
+<br>
+Test 1 checks that a default path usage is caught </br>
+Test 2 checks the case where 1 cookie is sent in a header in the
+request.</br>
+Test 3 checks the case where 2 cookies are sent in a header in the
+request.</br>
+Test 4 checks the case where a single query is sent in the request URL.</br>
+Test 5 checks the case where 2 queries are sent in the request URL</br>
+Test 6 checks the case where no queries are sent in the URL</br>
+Test 7 checks that the host is correct </br>
+Test 8 checks that the protocol is correct<br>
+Test 9 checks that the method is correct </br>
+Test 10 checks the get() method of the request object in an easy format<br>
+Test 11 checks the get() method of the request object in an hard format<br>
+Test 12 checks the is() method of the request object in an easy format<br>
+Test 13 checks the is() method of the request object in an hard format<br>
+Test 14 checks the is() method of the request object in an hard format<br>
+Test 15 checks that the next() recursion works well in the usages</br>
+Test 16 checks the case where the usage has a param at the end </br>
+Test 17 checks the case where the usage has a param at the middle </br>
+Test 18 checks the case where the usage has a param at the end and middle </br>
+Test 19 checks the case where the url has a param and query with the same name </br>
+Test 20 checks the case where the url has a param and query with different name </br>
+Test 21 checks the res.set() res.get() methods </br>
+Test 22 checks the error 404 </br>
+Test 23 checks the static server method </br>
+
+</body>
+</html>

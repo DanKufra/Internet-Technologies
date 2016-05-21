@@ -1,0 +1,46 @@
+1. What was hard in this exercise?
+
+    Design wise it was challenging to figure out.
+    Figuring out the whole synchronous and asynchronous callbacks in our tests
+    was a bit tricky.
+    In general, we learned a lot ,but I don't know that this was the best
+    teaching method,
+
+2. What was fun in this exercise?
+
+    When it finally worked. Also, teamwork is fun.
+
+3. What did you do in order to make your server efficient?
+
+    Made sure that our i/o operations were asynchronous.
+    We also used pipe(socket) to send the file data as the response body while
+    reading it.
+
+
+4. How did you test your server?
+
+    We tested our server in multiple ways:
+        a. In test.js we tested that all our files from ex2 can be retrieved
+           separately in multiple http requests. We also checked that an invalid
+           file path will not cause our server to collapse.
+
+        b. In load.js we tested a very large amount of concurrent clients
+           connecting to the server and checked that it can function under this
+           load.On our computers it managed to do over 1300. On the aquarium 
+		   computers it managed a varying amount so we set our load.js file
+		   to the minimum it achieved (300).
+
+        c. We opened a telnet connection to send one single http request in
+           multiple chunks in order to check that our server waits till the
+           end of the request.
+
+        d. We checked that our parser ignores headers we don't care about, but
+           sends an error when there is a mistake in the request we do care
+           about.
+
+        e. We checked that if a file is not of the allowed type we will throw
+           an error and return the proper response.
+
+        f. We checked that when given a path with a ".." in it we will not
+           accept the path so they cannot exit our root folder (as specified
+           by Ohad).
